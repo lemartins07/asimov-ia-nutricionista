@@ -1,8 +1,8 @@
 from datetime import datetime
 from typing import Optional, List
 from tinydb import Query
-from nutricionist.models.report import Report
-from nutricionist.repositories.base_repository import BaseRepository
+from nutritionist.models.report import Report
+from nutritionist.repositories.base_repository import BaseRepository
 
 
 class Report(BaseRepository[Report]):

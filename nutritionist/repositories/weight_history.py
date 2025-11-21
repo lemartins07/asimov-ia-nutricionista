@@ -1,8 +1,8 @@
 from typing import Optional, List
 from tinydb import Query
 from datetime import datetime
-from nutricionist.models.weight_history import WeightHistory
-from nutricionist.repositories.base_repository import BaseRepository
+from nutritionist.models.weight_history import WeightHistory
+from nutritionist.repositories.base_repository import BaseRepository
 
 
 class WeightHistory(BaseRepository):
