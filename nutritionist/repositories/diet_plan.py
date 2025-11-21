@@ -19,9 +19,9 @@ class DietPlanRepository(BaseRepository):
         result = self.diet_plan_table.get(DietPlanQuery.id == plan_id)
         return DietPlan(**result) if result else None
 
-    def get_last_diet_plan_for_user(self, user_id: int) -> Optional[DietPlan]:
+    def get_lastest_diet_plan_for_user(self, telegram_id: int) -> Optional[DietPlan]:
         DietPlanQuery = Query()
-        plans = self.diet_plan_table.get(DietPlanQuery.user_id == user_id)
+        plans = self.diet_plan_table.get(DietPlanQuery.user_id == telegram_id)
         if not plans:
             return None
 
