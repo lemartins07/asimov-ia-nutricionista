@@ -39,6 +39,11 @@ class UserRepository(BaseRepository):
         result = self.user_table.get(UserQuery.id == user_id)
         return User(**result) if result else None
 
+    def get_user_by_telegram_id(self, telegram_id: int) -> Optional[User]:
+        UserQuery = Query()
+        result = self.user_table.get(UserQuery.telegram_id == telegram_id)
+        return User(**result) if result else None
+
     def update_user(
         self,
         user_id: int,
